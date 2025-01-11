@@ -17,7 +17,7 @@ class SocketServer:
     SocketSubscriptionStatus = Literal['subscribe', 'unsubscribe']
     SocketEvents = Literal[
         'BlockBroken', 'BlockPlaced', 'CameraUsed', 'EndOfDay',
-        'EntitySpawned', 'ItemAcquired', 'ItemCrafted (disabled)',
+        'EntitySpawned', 'ItemAcquired', # Disabled: 'ItemCrafted', 
         'ItemDropped', 'ItemEquipped', 'ItemInteracted', 'ItemSmelted',
         'ItemUsed', 'MobKilled', 'PlayerBounced', 'PlayerDied',
         'PlayerMessage', 'PlayerTeleported', 'PlayerTravelled'
