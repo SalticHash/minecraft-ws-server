@@ -1,8 +1,9 @@
 from asyncio import Future, run as async_run
 from websockets import serve
 from websockets.asyncio.server import ServerConnection
-from websockets.exceptions import ConnectionClosedError
+from websockets.exceptions import ConnectionClosedError, ConnectionClosedOK
 from json import loads as json_parse, dumps as json_stringify
+from json.decoder import JSONDecodeError
 from uuid import uuid4
 from pyperclip import copy as clipboard_copy
 from typing import Literal
@@ -79,12 +80,19 @@ class SocketServer:
         await self.send(websocket, json_stringify(msg))
         
         try:
-            response: dict = json_parse(await websocket.recv())
+            response: str = await websocket.recv()
+            response_json: dict = json_parse(response)
+        except JSONDecodeError:
+            # Response wasn't json
+            return
         except ConnectionClosedError:
             print('Connection closed when identifying')
             return
+        except ConnectionClosedOK:
+            print('Connection closed when identifying')
+            return
         
-        responseRequestId: dict = response.get('header', {}).get('requestId')
+        responseRequestId: dict = response_json.get('header', {}).get('requestId')
         if requestId != responseRequestId: return
         
         self.minecraft_websocket = websocket
