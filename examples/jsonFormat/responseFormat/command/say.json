@@ -1,0 +1,12 @@
+// Response example format from command `say Pairing succesful!`
+{
+    "body": {
+        "message": "Pairing succesful!",
+        "statusCode": 0
+    },
+    "header": {
+        "messagePurpose": "commandResponse",
+        "requestId": "59840b21-1eda-47f7-b2c4-e9e2e2a00c23",
+        "version": 17039360
+    }
+}

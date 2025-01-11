@@ -1,0 +1,12 @@
+{
+    "header": {
+        "version": 1,
+        "requestId": "04276ea4-0260-410b-8acb-92945a47f684",
+        "messagePurpose": "unsubscribe",
+        "messageType": "commandRequest"
+    },
+    "body": {
+        "eventName": "BlockPlaced",
+        "version": 1
+    }
+}

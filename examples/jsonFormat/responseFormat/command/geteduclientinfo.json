@@ -1,0 +1,17 @@
+// Response example format from command `geteduclientinfo` (special websocket command)
+{
+    "body": {
+        "clientuuid": "ea1b80ed-a5a9-404e-a335-1fa125f2017b",
+        "companionProtocolVersion": 17039360,
+        "isEdu": false,
+        "isHost": true,
+        "permission": 3,
+        "playersessionuuid": "57a59d14-99fc-40f9-be0f-3a303970bbf6",
+        "statusCode": 0
+    },
+    "header": {
+        "messagePurpose": "commandResponse",
+        "requestId": "3508c370-7053-4b97-969e-6e2dc67875ed",
+        "version": 17039360
+    }
+}

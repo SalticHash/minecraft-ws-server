@@ -1,0 +1,41 @@
+// Response example format from BlockPlaced event
+{
+    "body": {
+        "block": {
+            "aux": 0,
+            "id": "grass_block",
+            "namespace": "minecraft"
+        },
+        "count": 1,
+        "placedUnderWater": false,
+        "placementMethod": 0,
+        "player": {
+            "color": "ffededed",
+            "dimension": 0,
+            "id": -4929274916,
+            "name": "SalticHash",
+            "position": {
+                "x": 67.15235900878906,
+                "y": 95.80548095703125,
+                "z": -135.2824401855469
+            },
+            "type": "minecraft:player",
+            "variant": 0,
+            "yRot": -90.96348571777344
+        },
+        "tool": {
+            "aux": 0,
+            "enchantments": [],
+            "freeStackSize": 63,
+            "id": "grass_block",
+            "maxStackSize": 64,
+            "namespace": "minecraft",
+            "stackSize": 1
+        }
+    },
+    "header": {
+        "eventName": "BlockPlaced",
+        "messagePurpose": "event",
+        "version": 17039360
+    }
+}

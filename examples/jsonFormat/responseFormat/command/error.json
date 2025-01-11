@@ -1,0 +1,11 @@
+{
+    "body": {
+        "statusCode": -2147483648,
+        "statusMessage": "Syntax error: Unexpected \"said\": at \">>said<< Pairing s\""
+    },
+    "header": {
+        "messagePurpose": "commandResponse",
+        "requestId": "1c88f690-bcb1-49d5-a1c4-33134b9dca76",
+        "version": 17039360
+    }
+}

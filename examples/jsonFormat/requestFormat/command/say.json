@@ -1,0 +1,16 @@
+// Request example format from command `say Pairing succesful!`
+{
+    "header": {
+        "version": 1,
+        "requestId": "59840b21-1eda-47f7-b2c4-e9e2e2a00c23",
+        "messagePurpose": "commandRequest",
+        "messageType": "commandRequest"
+    },
+    "body": {
+        "commandLine": "say Pairing succesful!",
+        "origin": {
+            "type": "player"
+        },
+        "version": 1
+    }
+}

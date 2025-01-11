@@ -1,0 +1,12 @@
+{
+    "header": {
+        "version": 1,
+        "requestId": "ad922cdf-24e9-407c-8ca3-fc359aa2f2e3",
+        "messagePurpose": "subscribe",
+        "messageType": "commandRequest"
+    },
+    "body": {
+        "eventName": "BlockPlaced",
+        "version": 1
+    }
+}

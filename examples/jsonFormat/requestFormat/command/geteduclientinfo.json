@@ -1,0 +1,16 @@
+// Request example format from command `geteduclientinfo` (special websocket command)
+{
+    "header": {
+        "version": 1,
+        "requestId": "3508c370-7053-4b97-969e-6e2dc67875ed",
+        "messagePurpose": "commandRequest",
+        "messageType": "commandRequest"
+    },
+    "body": {
+        "version": 1,
+        "commandLine": "geteduclientinfo",
+        "origin": {
+            "type": "player"
+        }
+    }
+}
