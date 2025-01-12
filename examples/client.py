@@ -1,6 +1,7 @@
 from asyncio import Future, run as async_run
 from websockets.asyncio.client import connect, ClientConnection
 from websockets.exceptions import ConnectionClosedError
+from json import loads as json_parse, dumps as json_stringify
 
 CLEAR_CONSOLE: str = '\033[H\033[J'
                                 
@@ -42,7 +43,15 @@ class SocketClient:
 
     async def receive(self, data: str) -> None:
         '''Executes each time the client receives a message from the server'''
-        await self.send("OK")
+        
+        # Identidy as not minecraft if got a `geteduclientinfo` request.
+        try:
+            json: dict = json_parse(data)
+            command: str = json.get('body', {}).get('commandLine')
+            if command == 'geteduclientinfo':
+                await self.send("Not Minecraft client")
+        except: pass
+
         pass
 
     async def proxy(self) -> None:
